@@ -1,0 +1,25 @@
+name: Commiter
+
+on:
+  schedule:
+    # Runs at 00:00 UTC every day
+    - cron: "39 15 * * *"
+  workflow_dispatch: # Allow manual triggers
+
+jobs:
+  scrape-imdb:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: 23f2001685@ds.study.iitm.ac.in
+        run: echo "hello" > hi.txt
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add .
+          git commit -m "Update hi.txt" || exit 0
+          git push
