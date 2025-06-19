@@ -3,7 +3,8 @@ name: Commiter
 on:
   schedule:
     # Runs at 00:00 UTC every day
-    - cron: "0 16 * * *"
+    - cron: "18 16 * * *"
+  workflow_dispatch:
 
 jobs:
   Q8:
