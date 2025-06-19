@@ -3,7 +3,7 @@ name: Commiter
 on:
   schedule:
     # Runs at 00:00 UTC every day
-    - cron: "55 15 * * *"
+    - cron: "0 16 * * *"
 
 jobs:
   Q8:
@@ -12,6 +12,9 @@ jobs:
       contents: write
 
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        
       - name: 23f2001685@ds.study.iitm.ac.in
         run: |
           git clone https://github.com/23f2001685/test.git
