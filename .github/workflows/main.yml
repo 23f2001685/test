@@ -3,7 +3,7 @@ name: Commiter
 on:
   schedule:
     # Runs at 00:00 UTC every day
-    - cron: "51 15 * * *"
+    - cron: "55 15 * * *"
 
 jobs:
   Q8:
