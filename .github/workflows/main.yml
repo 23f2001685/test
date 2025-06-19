@@ -6,7 +6,7 @@ on:
     - cron: "39 15 * * *"
 
 jobs:
-  scrape-imdb:
+  Q8:
     runs-on: ubuntu-latest
     permissions:
       contents: write
